@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absensi Log</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Absensi Log</h1>
+
+  <form id="absensiForm">
+    <input list="nameList" id="name" placeholder="Choose or Type">
+    <datalist id="nameList">
+      <option>Malik</option><option>Johan</option><option>Dudi</option>
+      <option>Iwan</option><option>Teddy</option><option>Kholik</option>
+      <option>Seno</option><option>Cahya</option>
+    </datalist>
+
+    <input type="date" id="date">
+
+    <input list="unitList" id="unit" placeholder="Choose or Type">
+    <datalist id="unitList">
+      <option>Avanza DYK</option><option>Xenia ROK | FAU</option>
+      <option>Honda BRV BZO</option><option>Veloz DFJ</option>
+      <option>Stargazer</option>
+      <option>Innova Reborn PKA | FAP</option>
+      <option>Innova Zenix 89 WIS</option>
+      <option>Innova Zenix 50 WIS</option>
+      <option>Innova Zenix Hybrid NFJ</option>
+    </datalist>
+
+    <div class="toggle">
+      <button type="button" class="active" data-job="Office">Office</button>
+      <button type="button" data-job="Personal">Personal</button>
+    </div>
+
+    <input id="po" placeholder="Type Manually">
+    <input id="user" placeholder="Type Manually">
+
+    <input list="destList" id="destination" placeholder="Choose or Type">
+    <datalist id="destList">
+      <option>Dalam Kota</option>
+      <option>Cikarang</option>
+      <option>Bandung</option>
+    </datalist>
+
+    <input list="durList" id="duration" placeholder="Choose or Type">
+    <datalist id="durList">
+      <option>Drop Only</option>
+      <option>6 Jam</option>
+      <option>12 Jam</option>
+      <option>Fullday</option>
+    </datalist>
+
+    <textarea id="notes" placeholder="Type Detail Info"></textarea>
+
+    <button type="submit" class="submit-btn">Input</button>
+  </form>
+</div>
+
+<div id="popup"></div>
+
+<button class="float-btn" onclick="alert('Absensi hari ini sudah masuk ✔️')">📋</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
