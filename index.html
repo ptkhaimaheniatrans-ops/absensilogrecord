@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absensi Log</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container glass">
+  <h1>Absensi Log</h1>
+
+  <form id="absensiForm">
+
+    <label>Driver</label>
+    <input list="driverList" placeholder="Driver" required>
+    <datalist id="driverList">
+      <option>Malik</option><option>Johan</option><option>Dudi</option>
+      <option>Iwan</option><option>Teddy</option><option>Kholik</option>
+      <option>Seno</option><option>Cahya</option>
+    </datalist>
+
+    <label>Date</label>
+    <input type="date" required>
+
+    <label>Unit</label>
+    <input list="unitList" placeholder="Unit" required>
+    <datalist id="unitList">
+      <option>Avanza DYK</option>
+      <option>Xenia ROK | FAU</option>
+      <option>Honda BRV BZO</option>
+      <option>Veloz DFJ</option>
+      <option>Stargazer</option>
+      <option>Innova Reborn PKA | FAP</option>
+      <option>Innova Zenix 89 WIS</option>
+      <option>Innova Zenix 50 WIS</option>
+      <option>Innova Zenix Hybrid NFJ</option>
+    </datalist>
+
+    <label>Job</label>
+    <div class="job-toggle">
+      <input type="radio" id="office" name="job" value="Office" checked>
+      <input type="radio" id="personal" name="job" value="Personal">
+
+    <div class="slider"></div>
+
+    <label for="office">Office</label>
+    <label for="personal">Personal</label>
+    </div>
+
+    <label>PO</label>
+    <input placeholder="PO" required>
+
+    <label>User</label>
+    <input placeholder="User" required>
+
+    <label>Destination</label>
+    <input list="destList" placeholder="Destination" required>
+    <datalist id="destList">
+      <option>Dalam Kota</option>
+      <option>Cikarang</option>
+      <option>Bandung</option>
+    </datalist>
+
+    <label>Duration</label>
+    <input list="durList" placeholder="Duration" required>
+    <datalist id="durList">
+      <option>Drop Only</option>
+      <option>6 Jam</option>
+      <option>12 Jam</option>
+      <option>Fullday</option>
+    </datalist>
+
+    <label>Notes</label>
+    <textarea placeholder="Notes Detail Info"></textarea>
+
+    <button type="submit">INPUT</button>
+  </form>
+</div>
+
+<!-- FLOAT TODAY LOG -->
+<div id="todayLog">Today Log</div>
+
+<!-- POPUP -->
+<div id="popup"></div>
+
+<div id="todayModal" class="glass modal">
+  <h3>Today Log</h3>
+  <ul id="todayList"></ul>
+  <button onclick="closeToday()">Close</button>
+</div>
+
+<audio id="clickSound" src="assets/sounds/clicktone.mp3"></audio>
+<audio id="successSound" src="assets/sounds/successtone.mp3"></audio>
+<audio id="errorSound" src="assets/sounds/errortone.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
