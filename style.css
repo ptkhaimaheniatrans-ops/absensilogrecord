@@ -171,3 +171,21 @@ table {
   border-radius: 14px;
   overflow: hidden;
 }
+
+/* FIX DATE INPUT AGAR SEJAJAR */
+input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+
+  background: #ffffff;
+  color: #000;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
