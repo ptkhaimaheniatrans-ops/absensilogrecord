@@ -1,0 +1,173 @@
+* { box-sizing:border-box; font-family:Arial,sans-serif }
+
+body {
+  margin:0;
+  background:url('assets/images/radio.jpg') center/cover no-repeat fixed;
+  height:100vh;
+}
+
+#loading {
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
+  font-size:22px;
+}
+
+/* LOADING PAGE */
+#loading {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#typewriter {
+  font-size: 22px;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hidden { display:none }
+
+.glass {
+  margin:20px auto;
+  padding:20px;
+  max-width:390px;
+  background:rgba(255,255,255,0.25);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+}
+
+h1 {
+  text-align:center;
+  color:white;
+}
+
+.tabs {
+  display:flex;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.tab {
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,0.7);
+}
+
+.tab.active { background:white }
+
+input, textarea {
+  width:100%;
+  margin:6px 0;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+
+textarea { height:70px }
+
+.toggle {
+  display:flex;
+  gap:10px;
+}
+
+.toggle button {
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+}
+
+.submit {
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:none;
+  margin-top:10px;
+}
+
+table {
+  width:100%;
+  color:white;
+  border-collapse:collapse;
+}
+
+th, td {
+  padding:6px;
+  text-align:center;
+}
+
+#popup {
+  position:fixed;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  padding:10px 20px;
+  border-radius:12px;
+  display:none;
+}
+
+/* BUTTON PRESS EFFECT */
+button:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+#popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: #ffffff;
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  width: fit-content;
+  height: fit-content;          /* 🔑 PENTING */
+  min-height: unset;     /* 🔑 PENTING */
+  max-height: unset;     /* 🔑 PENTING */
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;  /* 🔑 CEGAH MEMANJANG KE BAWAH */
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  z-index: 9999;
+}
+
+/* TAB CONTENT */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* TABLE TODAY LOG */
+table {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+}

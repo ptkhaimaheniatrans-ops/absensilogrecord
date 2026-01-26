@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABSENSI LOG</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">   <!-- 👈 TAMBAH -->
+<meta name="theme-color" content="#ffffff">  <!-- 👈 TAMBAH -->
+
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+  <span id="typewriter"></span>
+</div>
+
+<!-- MAIN -->
+<div id="app" class="hidden">
+  <div class="glass">
+
+    <h1>ABSENSI LOG</h1>
+
+    <div class="tabs">
+      <button class="tab active" onclick="openTab('form')">Form</button>
+      <button class="tab" onclick="openTab('log')">Today Log</button>
+    </div>
+
+    <!-- FORM -->
+    <div id="form" class="tab-content active">
+
+      <input type="date" id="date">
+
+      <input list="drivers" id="driver" placeholder="Driver">
+      <datalist id="drivers">
+        <option>Malik</option><option>Johan</option><option>Dudi</option>
+        <option>Iwan</option><option>Teddy</option><option>Kholik</option>
+        <option>Seno</option><option>Cahya</option>
+      </datalist>
+
+      <input list="units" id="unit" placeholder="Unit">
+      <datalist id="units">
+        <option>Toyota Avanza DYK</option>
+        <option>Daihatsu Xenia ROK | FAU</option>
+        <option>Honda RBV BZO</option>
+        <option>Veloz DFJ</option>
+        <option>Stargazer</option>
+        <option>Innova Reborn PKA | FAP</option>
+        <option>Innova Zenix 89 WIS</option>
+        <option>Innova Zenix 50 WIS</option>
+        <option>Innova Zenix Hybrid 95 NFJ</option>
+      </datalist>
+
+      <div class="toggle">
+        <button onclick="setJob('Office')">Office</button>
+        <button onclick="setJob('Personal')">Personal</button>
+      </div>
+
+      <input list="po" id="poInput" placeholder="PO">
+      <datalist id="po"><option>Khai</option></datalist>
+
+      <input list="users" id="user" placeholder="User">
+      <datalist id="users">
+        <option>Kantor</option><option>Mitra Tours & Travel</option>
+        <option>Nadesco Indonesia</option><option>TKE Elevator Indonesia</option>
+        <option>PT. Seven Gates Indonesia</option><option>SKC Law</option>
+      </datalist>
+
+      <input list="destination" id="destinationInput" placeholder="Destination">
+      <datalist id="destination">
+        <option>Dalam Kota</option><option>Bandung</option>
+      </datalist>
+
+      <input list="duration" id="durationInput" placeholder="Duration">
+      <datalist id="duration">
+        <option>Drop Only</option><option>6 Jam</option>
+        <option>12 Jam</option><option>Fullday</option>
+      </datalist>
+
+      <textarea id="notes" placeholder="Type detail info"></textarea>
+
+      <button class="submit" onclick="submitData()">Submit</button>
+    </div>
+
+    <!-- TODAY LOG -->
+    <div id="log" class="tab-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Driver</th>
+            <th>Date</th>
+            <th>Unit</th>
+            <th>Entry</th>
+          </tr>
+        </thead>
+        <tbody id="logBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<div id="popup"></div>
+
+<script src="script.js"></script>
+
+<script>
+if ("serviceworker" in navigator) {
+  navigator.serviceworker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
