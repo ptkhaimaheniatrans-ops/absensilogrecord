@@ -2,7 +2,7 @@
 
 body {
   margin:0;
-  background:url('assets/images/radio.jpg') center/cover no-repeat fixed;
+  background:url('assets/images/ride.jpg') center/cover no-repeat fixed;
   height:100vh;
 }
 
@@ -189,3 +189,4 @@ input[type="date"] {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
